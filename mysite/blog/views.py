@@ -69,4 +69,6 @@ def comment_remove(request,pk):
     comment.delete()
     return redirect('post_detail',pk=post_pk)
 
+# hello
+
 
