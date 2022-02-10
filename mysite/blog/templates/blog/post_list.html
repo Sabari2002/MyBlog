@@ -1,0 +1,48 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% block body %}
+
+<div class="row">
+    <div class="col-3">
+        <div class="profile">
+            <img  style="margin-top:15px;border-radius: 50px;" src="{% static 'media/me1.jpg' %}" alt="angela-profile-img">
+            <h6 style="margin-top:15px;margin-left:37px;">SABARI VASAN V</h6>
+            <p style="margin-top:5px;margin-left:30px;" class="intro">I am Web Developer.</p>
+          </div>
+          <hr style="width:30%;margin-left:23%;">
+          <div>
+            <p style="text-align:center;margin-right: 20%;"><a style="font-size: 2em;" href="https://github.com/Sabari2002" target="_blank"><span class="iconify" data-icon="icon-park:github"></span></a><a style="font-size: 2em;color: #006192;" href="https://www.linkedin.com/in/sabari-vasan-11564b229/" target="_blank"><span class="iconify" data-icon="bx:bxl-linkedin-square"></span></a>
+        </p>
+        </div>
+      
+    </div >
+    <div class="col">
+       <div class="vl"></div>
+    </div>
+    <div class="col-8">
+        <div>
+            {% for post in post_list %}
+            <div class="postlist">
+            <a style="text-decoration: none;color:black" href="{% url 'post_detail' pk=post.pk %}">
+            <div class="post">
+                <h1>{{ post.title }}</h1>
+            </div>
+            <div class="date">
+                <p>Published on : {{post.created_date}}</p>
+            </div>
+            <p>Comments : {{ post.approve_comments.count }}</p>
+            </a>
+            <hr>
+            {% endfor %}
+        </div>
+        </div>
+    </div>
+  </div>
+
+<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+<script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+
+
+
+
+{% endblock %}

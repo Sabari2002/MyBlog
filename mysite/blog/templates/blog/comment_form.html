@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %}
+{% block body %}
+    <h1>New Comment</h1>
+    <p><span style="text-decoration:underline;">NOTE:</span>Your comment will be visible once the comment is approved by admin.</p>
+    <form class="post_form" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Post comment</button>
+    </form>
+{% endblock %}
