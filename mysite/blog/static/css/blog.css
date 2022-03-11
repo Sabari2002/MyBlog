@@ -63,6 +63,17 @@ a:hover{
   margin-right:auto;
 }
 
+@media (max-width:1020px) {
+  .line{
+    display: none;
+  }
+
+
+  .boxicon {
+    margin-right: -50px;
+  }
+}
+
 
 
 
