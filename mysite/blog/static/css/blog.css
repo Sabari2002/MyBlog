@@ -31,6 +31,7 @@ a:hover{
   font-family: 'Montserrat', sans-serif;
   margin-top: 20px;
   font-weight:lighter;
+ 
 
 }
 
@@ -63,16 +64,6 @@ a:hover{
   margin-right:auto;
 }
 
-@media (max-width:1020px) {
-  .line{
-    display: none;
-  }
-
-
-  .boxicon {
-    margin-right: -50px;
-  }
-}
 
 
 
